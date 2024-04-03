@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>personal portfolio website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="C:\Users\harih\Downloads\WhatsApp Image 2024-03-31 at 8.59.14 AM.jpeg" class="logo">
+                <ul>
+                   <li><a href="#">Home</a></li>
+                   <li><a href="#">About</a></li>
+                   <li><a href="#">Portfolio</a></li>
+                   <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>web developer</p>
+                <h1>Hello..!! <br>This is <span>Ukesh V</span></h1>
+            </div>
+        </div>
+    </div>
+    <!-- --------about--------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="C:\Users\harih\Downloads\marriage photo.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About me</h1>
+                    <p>To work in an environment which encourages me to succeed and grow professionally where i can utilize my skills and knowledge appropriately</p>                
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">skills</p> 
+                        <p class="tab-links" onclick="opentab('Education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <u1>
+                            <li><span>Python</span></li>
+                            <li><span>Basics in Java</span></li>
+                            <li><span>Html</span></li>
+                            <li><span>Basics in SQL</span></li>
+                        </u1>
+                    </div>
+                    <div class="tab-contents" id="Education">
+                        <u1>
+                            <li><span>2021-2025</span><br>VELAMMAL INSTITUTE OF TECHONOLOGY - BE/ECE(at current 3rd year)</li>
+                            <li><span>2020-2021</span><br>VISWASAI JUNIOR COLLEGE - 12th</li>
+                            <li><span>2018-2019</span><br>RAVINDRA BHARATHI GROUP OF SCHOOLS (NELLORE) - 10th</li>
+                        </u1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+ <!-- --------contact----------- -->
+ <div class="Contact">
+    <div class="container">
+        <div class="row">
+            <div class="Contact-left">
+                <h1 class="sub-title">Contact me</h1>
+                <p>ukeshukesh624@gmail.com</p>
+            </div>
+            <div class="contact-right">
+                  
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script>
+        var tablinks=document.getElementsByClassName("tab-links");
+        var tabcontents=document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+        }
+        function opentab(tabname){
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+</body>
+</html>
